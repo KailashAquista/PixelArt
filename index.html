@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>PixelArt</title>
+		<link rel="stylesheet" type="text/css" href="css/pixelart.css">
+		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		<script src="javascript/pixelart.js"></script>
+		<script type="text/javascript" src="javascript/html2canvas.js"></script>
+		<script type="text/javascript" src="colorPicker/farbtastic.js"></script>
+		<link rel="stylesheet" href="colorPicker/farbtastic.css" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	</head>
+	<body onresize="reposicionar()">
+			<div id="gallery-left">
+				<p>Ejemplos</p>
+				<img src="images/creeper.png" width="80px" height="80px" onclick="loadCreeper()">
+				<img src="images/mario.png" width="80px" height="80px" onclick="loadMario()">
+				<img src="images/flappy.png" width="80px" height="80px" onclick="loadFlappy()">
+			</div>
+		<div id="container"></div>
+		<div id="gallery-right">
+			<div id="images-container">
+			</div>
+			<div class="scroll-up"></div>
+			<div class="scroll-down"></div>
+		</div>
+
+		<div class="actions">
+			<!--<div id="color-pick">
+				<div class="#0000ff"></div>
+				<div class="#ff0000"></div>
+				<div class="#00ff00"></div>
+				<div class="#0000ff"></div>
+				<div class="#ff0000"></div>
+				<div class="#00ff00"></div>
+				<div class="#0000ff"></div>
+				<div class="#ff0000"></div>
+				<div class="#00ff00"></div>
+				<div class="#0000ff"></div>
+				<div class="#ff0000"></div>
+				<div class="#00ff00"></div>
+				<div class="#0000ff"></div>
+				<div class="#ff0000"></div>
+				<div class="#00ff00"></div>
+
+			</div>-->
+			<form><input type="text" id="color" name="color" value="#ff0000" /></form>
+			<div id="colorpicker"></div>
+			<div id="acciones-botones">
+					<div id="container-sizeChanger">
+						<p>Tamaño (1 - 50)</p>
+						<input type="text" name="resize" id="resize">
+						<button id="change-size" class="action-button"></button>
+					</div>
+					<button id="reset" class="action-button"><span class="ion-ios-close-outline"></span></button>
+					<button id="undo" class="action-button" data-toggle="tooltip" title="ctrl + z"><span class="ion-android-arrow-back"></span></button>
+					<button id="rotate" class="action-button" onclick='rotarImagen()'><span class="ion-ios-reload"></span></button>
+					<button id="getColorTool" class="action-button"><span class="ion-trash-b"></span></button>
+					<button id="toggle-border" class="action-button"><span class="ion-ios-grid-view-outline"></span></button>
+					<button id="grab-it" class="action-button"><span class="ion-ios-camera"></span></button>
+			</div>
+		</div>
+	</body>
+</html>
